@@ -2,11 +2,11 @@
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
 
-const articles = ref([]);
+const articles: any = ref([]);
 
 onMounted(async () => {
   try {
-    const response = await axios.get('http://cyberspace-place.test/api/collections/articles/entries?fields=id,title');
+    const response = await axios.get('http://www.moj-primer.test/api/collections/articles/entries?fields=id,title');
     articles.value = response.data.data;
   } catch (error) {
     console.error('Error fetching articles', error);

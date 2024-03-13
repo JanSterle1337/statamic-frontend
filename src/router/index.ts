@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import DetailedArticle from '@/views/DetailedArticle.vue'
+import EditArticle from '@/views/EditArticle.vue'
 
 
 const router = createRouter({
@@ -23,6 +24,12 @@ const router = createRouter({
       path: '/article/:id',
       name: 'DetailedArticle',
       component: DetailedArticle,
+      props: true
+    },
+    {
+      path: '/article/edit/:id',
+      name: 'EditArticle',
+      component: EditArticle,
       props: true
     }
   ]
